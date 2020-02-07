@@ -4,77 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link src="calculadora.js"/>
-    <link href="estilo.css" type="text/css" rel="stylesheet">
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script.js"></script>
 
 </head>
 <body>
-<script>
-function soma() {
-    var resuldado = 3 + 3;
-    document.getElementById('display').innerHTML = resuldado
-}
- 
-</script>
-    <div>
-         <div class="page-header">
-          <h1>Calculadora</h1>
-        </div>
+    <div class="capa">
+        <textarea class='display1'name="display1" id="display1" disabled></textarea>
+        <textarea class='display2'name="display2" id="display2" disabled></textarea>
 
-        <div class="col-sm-6">
-            <div class="espacamento"class="resultado">
-                <input type="text" class="form-control" readonly=“false” style="width: 105px;">
-            </div>
-            <div class="espacamento"class="resultado">
-                <input type="text" class="form-control" readonly=“false” style="width: 105px;">
-            </div>
-            <div class="espacamento">
-                <table>
-                    <tr>
-                        <td><button class="btn btn-default" onclick="escreve()">1</button></td>
-                        <td><button class="btn btn-default" onclick="escreve()">2</button></td>
-                        <td><button class="btn btn-default" onclick="escreve()">3</button></td>
-                    </tr>
-                    <tr>
-                        <td><button class="btn btn-default" onclick="escreve()">4</button></td>
-                        <td><button class="btn btn-default" onclick="escreve()">5</button></td>
-                        <td><button class="btn btn-default" onclick="escreve()">6</button></td>
-                    </tr>
-                    <tr>
-         
-                        <td><button class="btn btn-default" onclick="escreve()">7</button></td>
-                        <td><button class="btn btn-default" onclick="escreve()">8</button></td>
-                        <td><button class="btn btn-default" onclick="escreve()">9</button></td>
-                    </tr>
-                    <tr>
-                        <td><button class="btn btn-default" onclick="escreve()">0</button></td>
-                        <td>
-                            <button class="btn btn-primary btn-md" onclick="escreve()">+</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-primary btn-md" onclick="escreve()">-</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><button class="btn btn-success btn-md" onclick="resultado()">=</button></td>
-                        <td>
-                            <button class="btn btn-primary btn-md" onclick="escreve()">/</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-primary btn-md" onclick="escreve()">x</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">
-                            <button class="btn btn-primary btn-md" onclick="escreve()" dispay.val("");>Limpar</button>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
+        <table class="caixa">
+            <tr>
+                <td> <button class="botao" onclick="escrever(1)">01</button></td>
+                <td> <button class="botao" onclick="escrever(2)">02</button></td>
+                <td> <button class="botao" onclick="escrever(3)">03</button></td>
+                <td> <button class="botao" onclick="clean()"><<</button></td>
+            </tr>
+
+            <tr>
+                <td> <button class="botao" onclick="escrever(4)">04</button></td>
+                <td> <button class="botao" onclick="escrever(5)">05</button></td>
+                <td> <button class="botao" onclick="escrever(6)">06</button></td>
+                <td> <button class="botao" onclick="escrever('-')">-</button></td>
+            </tr>
+
+            <tr>
+                <td> <button class="botao" onclick="escrever(7)">07</button></td>
+                <td> <button class="botao" onclick="escrever(8)">08</button></td>
+                <td> <button class="botao" onclick="escrever(9)">09</button></td>
+                <td> <button class="botao" onclick="escrever('+')">+</button></td>
+            </tr>
+
+            <tr>
+                <td> <button class="botao" onclick="escrever('=')">=</button></td>
+                <td> <button class="botao" onclick="escrever(0)">0</button></td>
+                <td> <button class="botao" onclick="escrever('*')">*</button></td>
+                <td> <button class="botao" onclick="escrever('/')">/</button></td>
+            </tr>
+        </table>
     </div>
-    
 </body>
 </html>
-
