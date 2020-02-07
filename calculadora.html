@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link src="calculadora.js"/>
+    <link href="estilo.css" type="text/css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+<script>
+function soma() {
+    var resuldado = 3 + 3;
+    document.getElementById('display').innerHTML = resuldado
+}
+ 
+</script>
+    <div>
+         <div class="page-header">
+          <h1>Calculadora</h1>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="espacamento"class="resultado">
+                <input type="text" class="form-control" readonly=“false” style="width: 105px;">
+            </div>
+            <div class="espacamento"class="resultado">
+                <input type="text" class="form-control" readonly=“false” style="width: 105px;">
+            </div>
+            <div class="espacamento">
+                <table>
+                    <tr>
+                        <td><button class="btn btn-default" onclick="escreve()">1</button></td>
+                        <td><button class="btn btn-default" onclick="escreve()">2</button></td>
+                        <td><button class="btn btn-default" onclick="escreve()">3</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn btn-default" onclick="escreve()">4</button></td>
+                        <td><button class="btn btn-default" onclick="escreve()">5</button></td>
+                        <td><button class="btn btn-default" onclick="escreve()">6</button></td>
+                    </tr>
+                    <tr>
+         
+                        <td><button class="btn btn-default" onclick="escreve()">7</button></td>
+                        <td><button class="btn btn-default" onclick="escreve()">8</button></td>
+                        <td><button class="btn btn-default" onclick="escreve()">9</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn btn-default" onclick="escreve()">0</button></td>
+                        <td>
+                            <button class="btn btn-primary btn-md" onclick="escreve()">+</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-md" onclick="escreve()">-</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn btn-success btn-md" onclick="resultado()">=</button></td>
+                        <td>
+                            <button class="btn btn-primary btn-md" onclick="escreve()">/</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-md" onclick="escreve()">x</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <button class="btn btn-primary btn-md" onclick="escreve()" dispay.val("");>Limpar</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
